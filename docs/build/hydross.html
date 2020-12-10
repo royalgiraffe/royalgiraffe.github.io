@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L9X5JHBLCZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-L9X5JHBLCZ');
+</script>
+<link rel="icon" type="image/png" href="/favicon.ico">
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Hydross Frost and Nature Resistance Guide</title>
+</head>
+<body>
+<div id="layout-content">
+<div id="toptitle">
+<h1>Hydross Frost and Nature Resistance Guide</h1>
+</div>
+<p>Hydross is an elemental and his primary attack is elemental melees. He switches between two forms, Frost and Nature. So you generally tank him with one tank in Frost Resist and another in Nature Resist. The resist cap is 365 for the boss. How much resistance you need will depend on your raid, with many guides suggesting getting resist cap, but some strong raids going as low as 100. A reasonable balance could be 244 resist (buffed), ⅔ of the cap, which is how much you need to push full-damage hits off the table.</p>
+<p>You can get 70 FR from buffs (Frost Resistance Aura / Aspect of the Wild) - this does not stack with other raid buffs like Mark of the Wild. So you only need 295 resist on gear to reach resist cap.</p>
+<p>Elemental melee attacks use melee attack mechanics for hit/miss/dodge/parry/etc, but calculate damage mitigation using the same elemental resistance mechanics as non-binary spells (instead of using armor like for physical attacks).</p>
+<p>Hydross can crit, so you will still want defense/resilience as usual to avoid crits. However, Hydross cannot crush and cannot be blocked.</p>
+<p>So, you will want to gear to balance resistance, stamina, crit avoidance, and threat generation. Armor, block chance, and block value are useless here.</p>
+<p>Hydross applies a stacking debuff every 15 seconds that increases damage taken by his current element, which increases with the number of stacks: 10%, 25%, 50%, 100%, 250%, and 500% increased damage. This multiplies with the mitigation from resistance: e.g. say he hits for 8k base damage, and you currently have 3 stacks for 50% bonus damage, and you roll a 50% resist, then you’ll take 8k * 150% * 50% = 6k damage.</p>
+<p>When the number of stacks gets too high, you move him across the boundary to switch him to his other form - usually while he's at 100% increased damage and before he gets to 250%. On each transition between Frost/Nature he resets threat and spawns adds: 4 smaller frost/nature elementals, of the same type as his new form. Some raids prefer to have off-tanks in a moderate amount of resist gear to help tank the adds. But they hit a lot less hard and are usually killed quickly, so you don't need as much resistance for them. (The adds are level 71, so the resist cap for them is slightly lower at 355, but you probably won’t need anywhere near that much resist.)</p>
+<p>At the resist cap (365), the average damage mitigation is 69%, so the average damage taken is 31%. Most attacks will hit for 50% or 25% damage, but there is about a 4% chance of taking 75% damage. </p>
+<p>Hydross’s damage range appears to be roughly 6,300 - 9,300 base damage (from PTR logs), which would mean average base damage is about 7,800. At 100% bonus damage, a hit at the top end of the range for 9.3k base damage would deal 9.3k damage with a 50% resist (doubled by the buff and then halved by resist), and 13,950 damage with a 25% resist. So you'll want at least 14k hp as a bare minimum, but you also want buffer to survive a couple unlucky hits without full heals.</p>
+<p>For most raids, I'd prioritize having a comfortable amount of HP, crit immunity, and at least 244 resist, and then add either more resist or threat generation depending on your needs.  Don't just go for resist cap if it means putting on pieces with terrible stats - you will want to gear to balance resistance, stamina, crit avoidance, and threat generation.</p>
+<p>Some good resources for info on gear options are:</p>
+<ul>
+<li><p><a href="https://media.discordapp.net/attachments/705462982607372348/883789282815385690/hydross_wip_v7-1.PNG">Askalon's Hydross Tank Prep Cheatsheet</a></p>
+</li>
+<li><p><a href="https://tbc.wowhead.com/guides/protection-paladin-frost-nature-resistance-best-in-slot-gear-burning-crusade">Askalon's Wowhead NR/FR Guide</a> - general resistance guide and Prot Paladin-specific gearing.</p>
+</li>
+<li><p><a href="https://www.youtube.com/watch?v=_8RrQUTeMEc">WarriorTSW's Hydross Resistance Explained Video</a> - general resistance guide and Warrior-specific gearing</p>
+</li>
+<li><p>Bitt’s Guides for <a href="https://bittsguides.com/frost-resistance-for-hydross-the-unstable/">Hydross Frost Resistance</a> and <a href="https://bittsguides.com/nature-resistance-for-hydross-the-unstable/">Hydross Nature Resistance</a></p>
+</li>
+</ul>
+<h2>General resistance tanking guide</h2>
+<p>When tanking spellcasters or elemental melee attacks, your damage mitigation is based on elemental resistance (instead of armor for physical damage). The resistance cap is 5 * AttackerLevel (365 for level 73 attacker), and the chances of resists are calculated based on Resistance Score / Cap. You gradually gain more mitigation as your resistance score increases; there are no sudden jumps.</p>
+<h3>Magic damage is bursty</h3>
+<p>One big difference from regular tanking (physical damage) is that spell/elemental damage mitigation is random and extremely bursty. For example, if you have armor cap (75% mitigation) then every physical attack has its damage reduced by 75%. But with spell/elemental damage, even at the resist cap, each attack will occasionally be resisted by only 25%, even though the average mitigation is 69%. E.g. a physical attack for 10k base damage will always hit for 2.5k damage at armor cap, vs a 10k damage spell will sometimes hit for 7.5k damage at resist cap. (This is for most boss spell/elemental attacks, which are non-binary aka partially resistable - the other type is binary spells, which are all-or-nothing, either miss or full damage, and have a 25% chance of full damage at resist cap.)</p>
+<p>This means your hp pool is very important, because you need to be able to survive the worst case hits, and also want buffer to survive taking an unlucky string of a few hard hits in a row without getting full healing in between, or maybe taking some unlucky damage from other sources too depending on the fight. So you want to balance resistance, stamina, and also threat generation, depending on your raid.</p>
+<p>There are some things easier about tanking spells compared to melee: NPC spells generally do not crit, there's no parry haste, and there's usually fewer different things that can hit you at the same time (since for melee there's auto attacks plus abilities). However, elemental melee tanking has the worst of both melee and resistance tanking.</p>
+<h3>How much damage mitigation you get from resistance</h3>
+<p>Most boss spell/elemental attacks, including Hydross, are non-binary - you can resist 0%, 25%, 50%, or 75% of the damage. For non-binary spells, average damage mitigation goes up to 69% at the resistance cap.</p>
+<ul>
+<li><p>From 0 up to ⅔ of the resistance cap (0 to 244 against level 73), the average mitigation increases linearly from 0% to 50%. Each point of resistance adds 75% / (5 * AttackerLevel) average mitigation - 0.205% against level 73.</p>
+</li>
+<li><p>From ⅔ of the resistance cap up to the cap (244 to 365 against level 73), the average mitigation increases linearly from 50% to 69%. Each point of resistance adds 56.25% / (5 * AttackerLevel) average mitigation - 0.154% against level 73 - 25% less value per point of resistance than before.</p>
+</li>
+</ul>
+<h3>Pushing full-damage hits off the table</h3>
+<p>⅔ of the resistance cap (244 against level 73) is also the amount of resistance you need to entirely eliminate the chance of 0% resists (full damage hits), which can be important to reduce your worst-case damage spikes. Against level 73, at 244 resistance you never take a full damage hit, while at 243 resistance you have a 1% chance to take a full damage hit.</p>
+<h3>Value of stacking Resistance, compared to Armor</h3>
+<p>Armor gives diminishing returns in Damage Mitigation as you stack more Armor, while each point of resistance gives a constant amount of mitigation, except for the 25% drop in value at ⅔ of the resistance cap for non-binary spells. Armor gives you constant Effective HP per point of armor, while you get more EHP per point of resistance as you get closer to the cap. However, because spell damage is highly bursty - each hit can deal up to 75% or 100% damage - EHP is not really a good measure of survivability by itself. Increasing your resistance close to the cap reduces, but does not eliminate, the chance of a high burst of damage (up to 75% damage for non-binary spells when higher than ⅔ of the resistance cap).</p>
+<p>You can see a graph and calculator for resistances at my <a href="resist-calc">Resistances Calculator</a>.</p>
+</div>
+</body>
+</html>

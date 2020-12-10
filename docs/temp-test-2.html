@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+  if (window.top != self) window.top.location.replace(self.location);
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L9X5JHBLCZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L9X5JHBLCZ');
+</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sapphiron calculator</title>
+  <link rel="icon" type="image/png" href="/favicon.ico">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+        $("#mainiframe").bind("load", function(){
+            $(this).focus();
+        });
+    });
+  </script>
+</head>
+<body>
+<iframe
+  id="mainiframe"
+  title="Embedded Google Doc"
+  src="https://docs.google.com/spreadsheets/d/1dGn8B6Eu5yRg_QAHGM7N1xEfnth1Abt7yAbQSRkNvMU/preview"
+  style="
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    z-index: 999999;
+    height: 100%;
+  ">
+</iframe>
+</body>
+</html>

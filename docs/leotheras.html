@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L9X5JHBLCZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-L9X5JHBLCZ');
+</script>
+<link rel="icon" type="image/png" href="/favicon.ico">
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Leotheras Fire Resistance Guide</title>
+</head>
+<body>
+<div id="layout-content">
+<div id="toptitle">
+<h1>Leotheras Fire Resistance Guide</h1>
+</div>
+<div class="infoblock">
+<div class="blockcontent">
+<p><a href="leotheras-calc">Calculator for Leotheras FR</a></p>
+</div></div>
+<p>Leotheras alternates between Human Form and Demon Form. While in Demon Form, Leotheras’s primary attack is Chaos Blast, an AoE spell which deals 1675 base fire damage and applies a stacking debuff that increases fire damage taken by 1675 per stack. So each time you’re hit by Chaos Blast, you’ll take 1675 * n damage, with n starting at 1 and increasing with each hit during this Demon Form. The debuff lasts 45 seconds (refreshing on every hit) so it resets in between Demon Form phases. He resets threat on each change between forms. At 15% health, he splits into both Demon and Human forms, and you will need to tank Chaos Blast until he's dead.</p>
+<p>To tank the Demon Form, you need a tank with high fire resistance to help resist Chaos Blast. Using a warlock tank is a common strategy, but you can also tank him with a conventional tank wearing FR - in fact melee tanks have some significant advantages.</p>
+<h2>How much FR is needed to tank?</h2>
+<p>tldr: If you have 11,726-13,400 HP (buffed), you can survive 7 hits, aim for 360-365 FR buffed = 290-295 FR unbuffed. With 13,401-15,075 HP, you can survive 8 hits, aim for 345-365 FR buffed = 275-295 FR unbuffed.</p>
+<p>You can get 70 FR from buffs (Fire Resistance Aura/Totem) - this does not stack with other raid buffs like Mark of the Wild. So you only need 295 resist from gear and enchants to reach the resist cap of 365.</p>
+<p>There are also consumables that can increase your resistance - the options are Broiled Bloodfin (+8 all resistances), which is not great but ok if you just want a little bit more FR, and Flask of Chromatic Resistance (+25 all resistances), which is pretty bad, you're better off getting more FR with your gear and using your normal SP flask. Flask of Chromatic Wonder (+35 all resistances and +18 all stats) is not available yet in phase 2.</p>
+<p>Unlike most resistance fights (like Hydross or Twin Emps) where you can get away with low resistance if you have good enough heals, Leotheras actually requires high FR because if you get hit enough times and get too many stacks, you will get one-shot. But getting to a high enough HP threshold is just as important as FR.</p>
+<p>Chaos Blast is a binary spell because of the stacking debuff, so each cast either hits or is resisted. The chance that each cast resists is 75% * Resistance / 365. (There's also a 1% miss chance on top of that.) Because the damage stacks with each hit, at some point you will be one-shot after enough hits. You can calculate how many hits it will take to one-shot you as HP / 1675 (rounded up). For example, if you have 12k hp, you can survive 7 hits (the 7th deals 11725 dmg) and will be one-shot on the 8th hit (13400 dmg).</p>
+<p>In a single Demon Form phase, which lasts 60 seconds, he will typically cast Chaos Blast about 17-20 times. This is because Chaos Blast has a 2 second cast time, but there’s a random delay between each cast, so the average time between casts is about 2.6-2.9 seconds.</p>
+<p>See my <a href="leotheras-calc">calculator for Leotheras FR</a> to calculate the chance of getting one-shot for different amounts of HP and FR.</p>
+<p>For example, if you have 365 fire resist and between 11,726-13,400 HP, and Leotheras casts Chaos Blast 20 times in a single Demon phase, the chance that you get hit 8 or more times and therefore get one-shot is 9.7% (<a href="https://www.wolframalpha.com/input/?i=binomial+distribution+%28n%3D20%2C+p%3D.25*.99%29+%3E%3D+8">calculation here</a>). Remember that this is for each Demon phase, and you'll need to survive a couple plus the final Split phase.</p>
+<p>Melee defensive stats (armor, block, defense, etc) are useless for tanking Chaos Blast - only FR and HP matter.</p>
+<h2>Warlock vs melee tanks</h2>
+<p>The Demon Form tank is often a warlock for a few reasons: it’s easier to tank Demon Form with a ranged tank because then you don’t need to worry about Chaos Blast hitting the melee; and Warlocks have relatively high HP compared to other casters, and generate good threat with Searing Pain.</p>
+<p>However, you can also tank him conventionally - if the melee tank and melee DPS are max melee range on opposite sides of the boss (kind of like Thaddius) then Chaos Blast will only hit the tank.</p>
+<p>No matter what class they are, your tank for Demon Form will need high FR and HP, and does not need armor, defense, etc.</p>
+<p>Conventional tanks have some significant advantages: they often have great threat gen and more HP to survive more stacks, and have cooldowns that allow them to survive a lot longer in an emergency - Paladins can Divine Shield to drop stacks, and Warriors can Shield Wall and Last Stand.</p>
+<h2>Using cooldowns to survive more stacks</h2>
+<p>There are several cooldowns to boost your effective HP pool temporarily to survive a hit that would otherwise one-shot you. You should start using these when you get to enough stacks that the next hit would one-shot you. Note, there's also a chance of dying if you get hit twice in a row and don't get healed enough in between - if you're low on heals then you may need to use cooldowns earlier, to avoid getting two-shot rather than one-shot.</p>
+<ul>
+<li><p>Nightmare Seed (consumable on shared cooldown with healthstone) increases your hp by 2000 for 30 sec, allowing you to survive an extra stack (or 2 if you were close to the next hp threshold).</p>
+</li>
+<li><p>Shields/absorbs like Power World: Shield and Major Fire Protection Potion should be used after Nightmare Seed, since they will only last for one hit each. Warlocks can FelDom a Voidwalker for the Sacrifice shield. Note that Fire Protection Potion gives you fire-only shield which does stack with all-damage shields, but different all-damage shields do not stack with each other - you only get the highest one at a time.</p>
+</li>
+<li><p>You can drop stacks by having a Paladin cast Divine Intervention on you, and Paladin tanks can Divine Shield themselves to drop stacks. This is great for in case you get unlucky and are about to reach your stack limit.</p>
+</li>
+<li><p>Warrior tanks can use cooldowns like Shield Wall and Last Stand. If you have a Discipline Priest with Pain Suppression, that also provides a temporary damage reduction buff.</p>
+</li>
+</ul>
+<p>Because of the cooldowns you can't rely on these every Demon phase, but typically you should have a less than 10% chance of getting to enough stacks to need them on each Demon phase, and you use them if you get unlucky.</p>
+<h2>Handling the final Split Phase</h2>
+<p>When you get Leotheras down to 15% HP, he summons a new Demon Form version of himself, and you need to kill the Human Form version. The Demon Form tank will need to continue tanking Chaos Blast until he's dead.</p>
+<p>The difficult part is you will usually still have some Chaos Blast stacks left from the last Demon Form when Split phase starts, unless you get lucky with the timing. This is because Chaos Blast stacks last until you go 45 sec without getting hit by another, and Human Form also lasts 45 sec (except for the first one which is 60 sec), so there's usually not enough time to drop the debuff. So you may end up tanking much more than 20 Chaos Blasts without having a chance to drop stacks, which can easily kill you.</p>
+<p>If you happen to push him into split phase early in a Demon phase, then you won't have built up many stacks yet so that isn't too much of a problem. If you push him into split phase late in Human phase, you can consider having someone else take the first couple hits for long enough for the main Demon tank to drop stacks - the first few stacks don't do much damage so it's fine to take them even without FR. However, if Split phase starts late in Demon phase or early in Human phase, you'll have a lot of stacks and it will take a long time to drop them, so you may need to have a rotation of multiple people to take a couple stacks each, or use Paladin bubble to drop stacks.</p>
+<h2>Warlock tank gearing</h2>
+<p>For warlock tanks, your best option is to use the Infernoweave gear sold by the Badge of Justice vendor (total 100 badges) - the set gives a total of 200 FR, and along with a couple other FR pieces you'll get enough FR with a lot of stam and with a decent number of gear slots where you can wear DPS gear for threat stats. Your stat priorities are FR and HP (see above for how much to aim for), then spell hit so your Searing Pains don't miss, then SP, crit, and your other normal DPS stats.</p>
+<p>Some of the best FR pieces to add to the Infernoweave set are:</p>
+<ul>
+<li><p>Ring: <a href="https://tbc.wowhead.com/item=31746/phoenix-fire-band">Phoenix-fire Band</a> - 30 FR and 34 Stam (Quest reward from SSC attunement chain)</p>
+</li>
+<li><p>Neck: <a href="https://tbc.wowhead.com/item=31074/amulet-of-the-torn-heart">Amulet of the Torn-heart</a> - 24 FR and 30 Stam (Quest reward from SSC attunement chain), or</p>
+</li>
+<li><p>Neck: <a href="https://tbc.wowhead.com/item=24092/pendant-of-frozen-flame">Pendant of Frozen Flame</a> - 30 FR and 18 Stam, and an active ability that gives you a fire protection shield (Jewelcrafting BoE)</p>
+</li>
+<li><p>Cloak: <a href="https://tbc.wowhead.com/item=31341/wyrmcultists-cloak">Wyrmcultist's Cloak</a> - 24 FR and 14 Stam</p>
+<ul>
+<li><p>This is a BoP purchased from an <a href="https://tbc.wowhead.com/npc=22099/wyrmcult-provisioner">enemy NPC vendor</a>. Requires you to do a quest chain in Blade's Edge starting with <a href="https://tbc.wowhead.com/quest=10719/did-you-get-the-note">Did You Get The Note?</a> up to the point where you collect the costume. Once you're on that quest or have completed it, gather 5 Costume Scraps and put on the costume which allows you to buy from the vendor.</p>
+</li></ul>
+</li>
+<li><p><a href="https://tbc.wowhead.com/spell=25081/enchant-cloak-greater-fire-resistance">Enchant Cloak - Greater Fire Resistance</a> - 15 FR</p>
+</li>
+<li><p><a href="https://tbc.wowhead.com/item=29485/flame-armor-kit">Flame Armor Kit</a> - 8 FR</p>
+</li>
+<li><p>Stamina enchants are also good on any pieces that aren't in your regular DPS set.</p>
+</li>
+</ul>
+<p>Here are some EXAMPLE sets to give you an idea of what sort of FR gear set to build: <a href="https://seventyupgrades.com/set/47agrfjCsnhp3ABeWaPpCx">My example FR set</a>, <a href="https://seventyupgrades.com/set/xoT2xJ58y7jLATbCx2WwmG">Stabile's example FR set</a> - you can swap your gear around based on what you have.</p>
+<p>My example set is not a BiS set, in fact it uses a lot of quest items that you can get even if you don't have great raid drops. In addition to prioritizing FR, you should also try to choose pieces with more Stam, and pieces with a lot of hit to get close to hit cap - hit especially important as a tank so you can have consistent threat gen especially at the start of the Demon phase. Note that you don't need FR cap - my set is 293 FR unbuffed = 363 FR buffed, 2 short of the cap - adding those 2 points would translate to a very slightly smaller risk of death, but I'd rather add more stam and threat stats. Use <a href="leotheras-calc">my calculator</a> to see how the numbers compare for your gear sets.</p>
+<p>Generally, good FR pieces will net you about 2 or more FR per 1 SP lost, if you look at how much FR you gain and how much damage stats you lose compared to what you'd otherwise be wearing in that slot (translate other DPS stats into SP as usual). You can use stats weights (aka Equivalency Points) with your normal DPS stat weights and 1 FR = 2.2 SP to get a rough idea of what FR pieces are good or bad tradeoffs.</p>
+<p>See <a href="https://bittsguides.com/fire-resistance-for-leotheras-the-blind/">Bitt's Guides - Fire Resistance for Leotheras the Blind</a> for more info on gear options.</p>
+<h2>Warlock talents</h2>
+<p>Warlocks have some Demonology talents that can potentially be helpful for tanking, and a lot of old guides recommend them, but they are not at all required and most Warlocks should simply tank him in their regular talent spec.</p>
+<p>Master Demonologist (MD) gives an additional 70 resistance with the Felhunter pet, but it’s easy to get resistance cap without MD. Soul Link (SL) splits some damage with your pet giving you more effective health, but it’s often more of a liability than a benefit, because then healers have to split their healing between you and your pet (if your pet dies, you lose the benefits of both MD and SL, although you can resummon with Fel Domination).</p>
+<p>The standard talent builds for both Destro and Demo locks include Demonic Embrace (15% increased stamina) which is very valuable for tanking. You probably don't want an aff lock to tank, but if for some reason you need to they'll have a harder time tanking, but it's still certainly feasible.</p>
+<p>Note: Warlock tanks should not spec Nether Protection, because when it procs you become invulnerable to fire and lose aggro (similar to vanilla LIP).</p>
+<h2>Threat drop timings</h2>
+<p>One of the main things to watch out for are the threat drops on every phase transition and at the end of every whirlwind.</p>
+<p>The first Human phase lasts 60 seconds, then every Human phase after that lasts about 45 seconds. Each Demon phase lasts about 60 seconds. So for a warlock tank, you should cast Doom right after Leotheras comes up and it will hit right after he transitions to Demon form the first time, and then after that you should cast Doom about 30 seconds into Human phase, which is 15 seconds before the end of Human phase - the phase lengths are a bit random so you probably want to wait an extra couple seconds. For a warlock DPS, you should not cast Doom right at the start, instead start with an Agony first and then Dooms.</p>
+<p>The DBM timers are not reliable for phase transitions, but they are reliable for whirlwind (lasts 12 sec). It's already hard for the tanks to pick him up after Whirlwind because of the random movement, so make sure to avoid having a cast in flight as whirlwind ends or you can easily pull threat and die. Take the cast time of your main spell and add the flight time which is up to about 2 seconds at max range - so for the last 4-5 seconds switch to casting Life Tap or the spells you'd normally use as finishers like Searing Pain, Conflagrate, Shadowburn, etc for Warlocks.</p>
+</div>
+</body>
+</html>
